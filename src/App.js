@@ -49,6 +49,7 @@ class App extends Component {
 					localStorage.token = res.data.token
 					this.setState({
 						isLoggedIn: true
+						
 					})
 				})
 				.catch(err => console.log(err))
@@ -81,7 +82,6 @@ class App extends Component {
         </header>
         <p className='App-intro'>
                         WELCOME TO HEIR POLLUTION.  WHERE YOU HAVE INHERITED THE PREVIOUS GENERATIONS PROBLEMS </p>
-
 		</div>
 				<ReactCSSTransitionGroup 
 					transitionName="example"
