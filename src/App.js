@@ -1,11 +1,11 @@
+
 import React, {Component} from 'react';
 import './App.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {Motion, spring} from 'react-motion';
 import NavigationPanel from './components/NavigationPanel';
 import Modal from './components/Modal';
-import axios from 'axios';
-
+import axios from 'axios'
 class App extends Component {
 
 	constructor(props) {
@@ -22,10 +22,10 @@ class App extends Component {
 		this.setState({ mounted: true });
 	}
 	
-	handleSubmit = (e) => {
+	handleSubmit (e) {
 		this.setState({ mounted: false });
 		e.preventDefault();
-		axios.post("http://localhost3001/SignUp", {
+		axios.post("https://heirpollution.herokuapp.com/", {
 			email: this.state.email,
 			password: this.state.password
 		})
@@ -41,7 +41,7 @@ class App extends Component {
 				mounted: false
 			});
 			e.preventDefault();
-			axios.post("http://localhost3001/LoginIn", {
+			axios.post("https://heirpollution.herokuapp.com/", {
 					email: this.state.email,
 					password: this.state.password
 				})
